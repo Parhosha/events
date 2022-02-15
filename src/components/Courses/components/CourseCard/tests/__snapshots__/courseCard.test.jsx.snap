@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test courseCard with Snapshot 1`] = `
+<div
+  className="md courseCard"
+  data-testid="course"
+>
+  <h3
+    className="title"
+    data-testid="title"
+  >
+    JavaScript
+  </h3>
+  <p
+    className="creation"
+  >
+    <b>
+      Created: 
+    </b>
+     
+    8/3/2021
+  </p>
+  <p
+    className="duration"
+  >
+    <b>
+      Duration: 
+    </b>
+     2:40 hours
+  </p>
+  <p
+    className="description"
+    data-testid="courseDescription"
+  >
+    Lorem Ipsum is simply dummy text of the printing and
+   typesetting industry. Lorem Ipsum 
+    has been the industry's standard dummy text ever since the
+   1500s, when an unknown 
+    printer took a galley of type and scrambled it to make a type
+   specimen book. It has survived 
+    not only five centuries, but also the leap into electronictypese...
+  </p>
+  <ul
+    className="authors"
+  >
+    <b>
+      Tutors: 
+    </b>
+     
+    <li
+      data-testid="courseAuthor"
+    >
+      Vasiliy Dobkin
+       
+      
+    </li>
+  </ul>
+  <div
+    className="actions"
+  >
+    <button
+      className="button showMoreBtn"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Show course
+    </button>
+  </div>
+</div>
+`;

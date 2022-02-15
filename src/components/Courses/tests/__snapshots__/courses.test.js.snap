@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CourseForm should be showed after a click on a button "Add new course". 1`] = `
+<div
+  className="md courses"
+  data-testid="coursesContainer"
+>
+  <div
+    className="searchBar"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <label
+        className="search"
+        htmlFor="search"
+      >
+        
+        <input
+          id="search"
+          minLength={0}
+          onChange={[Function]}
+          placeholder="Enter course name or id..."
+          required={false}
+          type="text"
+          value=""
+        />
+        <button
+          className="button searchBtn"
+          onClick={[Function]}
+          type="button"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+    <button
+      className="button"
+      onClick={[Function]}
+      type="button"
+    >
+      Add new course
+    </button>
+  </div>
+  <div
+    className="notFoundCourse"
+  >
+    Course doesn't exist
+  </div>
+</div>
+`;
+
+exports[`should display Empty container if courses array length is 0 1`] = `
+<div
+  className="md courses"
+  data-testid="coursesContainer"
+>
+  <div
+    className="searchBar"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <label
+        className="search"
+        htmlFor="search"
+      >
+        
+        <input
+          id="search"
+          minLength={0}
+          onChange={[Function]}
+          placeholder="Enter course name or id..."
+          required={false}
+          type="text"
+          value=""
+        />
+        <button
+          className="button searchBtn"
+          onClick={[Function]}
+          type="button"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </div>
+  <div
+    className="notFoundCourse"
+  >
+    Course doesn't exist
+  </div>
+</div>
+`;
+
+exports[`should display amount of CourseCard equal length of courses array 1`] = `
+<div
+  className="md courses"
+  data-testid="coursesContainer"
+>
+  <div
+    className="searchBar"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <label
+        className="search"
+        htmlFor="search"
+      >
+        
+        <input
+          id="search"
+          minLength={0}
+          onChange={[Function]}
+          placeholder="Enter course name or id..."
+          required={false}
+          type="text"
+          value=""
+        />
+        <button
+          className="button searchBtn"
+          onClick={[Function]}
+          type="button"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </div>
+  <div
+    className="md courseCard"
+    data-testid="course"
+  >
+    <h3
+      className="title"
+      data-testid="title"
+    >
+      JavaScript
+    </h3>
+    <p
+      className="creation"
+    >
+      <b>
+        Created: 
+      </b>
+       
+      8/3/2021
+    </p>
+    <p
+      className="duration"
+    >
+      <b>
+        Duration: 
+      </b>
+       2:40 hours
+    </p>
+    <p
+      className="description"
+      data-testid="courseDescription"
+    >
+      Lorem Ipsum is simply dummy text of the printing and
+   typesetting industry. Lorem Ipsum 
+    has been the industry's standard dummy text ever since the
+   1500s, when an unknown 
+    printer took a galley of type and scrambled it to make a type
+   specimen book. It has survived 
+    not only five centuries, but also the leap into electronictypese...
+    </p>
+    <ul
+      className="authors"
+    >
+      <b>
+        Tutors: 
+      </b>
+       
+      <li
+        data-testid="courseAuthor"
+      >
+        Vasiliy Dobkin
+         
+        
+      </li>
+    </ul>
+    <div
+      className="actions"
+    >
+      <button
+        className="button showMoreBtn"
+        onClick={[Function]}
+        type="button"
+      >
+        Show course
+      </button>
+    </div>
+  </div>
+  <div
+    className="md courseCard"
+    data-testid="course"
+  >
+    <h3
+      className="title"
+      data-testid="title"
+    >
+      Angular
+    </h3>
+    <p
+      className="creation"
+    >
+      <b>
+        Created: 
+      </b>
+       
+      10/11/2020
+    </p>
+    <p
+      className="duration"
+    >
+      <b>
+        Duration: 
+      </b>
+       3:30 hours
+    </p>
+    <p
+      className="description"
+      data-testid="courseDescription"
+    >
+      Lorem Ipsum is simply dummy text of the printing and
+   typesetting industry. Lorem Ipsum 
+    has been the industry's standard dummy text ever since the
+   1500s, when an unknown 
+    printer took a galley of type and scrambled it to make a type
+   specimen book.
+    </p>
+    <ul
+      className="authors"
+    >
+      <b>
+        Tutors: 
+      </b>
+       
+      <li
+        data-testid="courseAuthor"
+      >
+        Anna Sidorenko
+         
+        ,
+      </li>
+      <li
+        data-testid="courseAuthor"
+      >
+        Valentina Larina
+         
+        
+      </li>
+    </ul>
+    <div
+      className="actions"
+    >
+      <button
+        className="button showMoreBtn"
+        onClick={[Function]}
+        type="button"
+      >
+        Show course
+      </button>
+    </div>
+  </div>
+</div>
+`;

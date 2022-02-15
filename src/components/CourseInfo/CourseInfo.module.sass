@@ -1,0 +1,41 @@
+@import '../../common/styles/_variables'
+
+.courseInfo
+    display: grid
+    grid-template-areas: 'header header' 'description info'
+    grid-template-columns: 3fr 2fr
+    grid-template-rows: 1fr 4fr 
+    border: 2px solid $body
+    height: 80vh
+
+    h1
+        font-size: $fs3
+        text-align: center
+    p
+        font-size: $fs1
+
+    b
+        font-size: $fs1
+
+
+.info
+    grid-area: info
+    margin: 0 auto
+    
+    p
+        margin-bottom: 15px 
+
+
+.description
+    grid-area: description
+
+
+.header
+    grid-area: header
+
+.authors
+    list-style: none
+
+    li  
+        font-size: $fs1
+        margin-top: 15px 

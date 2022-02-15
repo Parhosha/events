@@ -1,0 +1,26 @@
+@import './configs'
+
+@function stripUnit($num)
+  @return $num / ($num * 0 + 1)
+
+@function rem($px)
+  @return ($px / $baseHtmlFs) * 1rem
+
+@mixin fontSizeRem($fontSizePx)
+  font-size: $fontSizePx // fallback for old browsers
+  font-size: rem($fontSizePx)
+
+@mixin lineHeight($lineHeightPx, $fontSizePx)
+  line-height: $lineHeightPx // fallback for old browsers
+  line-height: stripUnit($lineHeightPx) / stripUnit($fontSizePx)
+
+/**
+/* Adds font-size in rem and line-height in number with a px fallback
+/* Usage:
+/* .name
+/*    @include fontDimensions(20px, 12px);
+/**
+
+@mixin fontDimensions($lineHeightPx, $fontSizePx)
+  @include fontSizeRem($fontSizePx)
+  @include lineHeight($lineHeightPx, $fontSizePx)

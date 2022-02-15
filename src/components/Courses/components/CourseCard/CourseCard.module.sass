@@ -1,0 +1,65 @@
+@import '../../../../common/styles/_variables'
+
+
+.courseCard
+    
+    border: 2px solid $card
+    height: 110px
+    overflow: hidden
+    display: grid
+    grid-gap: 0 10%
+    grid-template-columns: 3fr 1fr
+    grid-template-rows: 1fr 1fr 1fr 1fr
+    grid-template-areas: 'title authors' 'description duration' 'description creation' '. showMore'
+    margin: 20px 0 10px
+
+    p,b
+        font-size: $fs1
+
+.title
+    font-size: $fs3
+    grid-area: title
+
+.duration
+    grid-area: duration
+
+.creation
+    grid-area: creation
+
+.description
+    font-size: $fs1
+    grid-area: description
+    padding: 10px 0
+
+.actions
+    grid-area: showMore
+    display: flex
+
+
+.editBtn,
+.delateBtn
+    width: 40px
+    padding:  0px
+    display: flex
+    align-self: center
+    justify-content: center
+    margin-left: 10px
+
+
+    svg 
+        padding: 4px
+        height: 18px
+
+.authors
+    list-style: none
+    grid-area: authors
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+    li
+        display: inline-block
+        white-space: nowrap
+        font-size: $fs1
+        text-overflow: ellipsis
+        padding-right: 10px

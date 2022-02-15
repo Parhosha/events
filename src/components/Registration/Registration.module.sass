@@ -1,0 +1,43 @@
+@import '../../common/styles/_variables'
+
+.registration
+    display: flex
+    flex-direction: column
+    height: 80vh
+    border: 2px solid $body
+    margin: 20px 0 0 0
+    justify-content: center
+    align-items: center
+
+    h1
+        font-size: $fs3
+
+.registrationForm
+    display: inherit
+    flex-direction: column
+
+    label
+        font-size: $fs1
+        display: inherit
+        flex-direction: column
+        margin: 5px auto
+
+        input
+            margin: 5px auto
+    
+    .loginLink, a        
+        margin: auto
+        font-size: $fs1
+        
+    a
+         color: blue
+
+.registrationButton
+    margin: 20px auto
+
+.error
+    text-align: center
+    color: red
+    font-weight: 700
+    font-size: 1.4rem
+    margin-top: 10px

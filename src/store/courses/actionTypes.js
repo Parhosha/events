@@ -1,0 +1,5 @@
+export const SET_COURSES = 'SET_COURSES';
+export const REMOVE_COURSES = 'REMOVE_COURSES';
+export const REMOVE_COURSE = 'REMOVE_COURSE';
+export const ADD_COURSE = 'ADD_COURSE';
+export const UPDATE_COURSE = 'UPDATE_COURSE';
