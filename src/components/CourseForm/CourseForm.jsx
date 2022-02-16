@@ -4,8 +4,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { toast } from 'react-toast'
-import Input from 'common/components/Input/Input';
-import Wrapper from 'common/components/wrapper/Wrapper';
+import Input from 'common/commonComponents/Input/Input';
+import Wrapper from 'common/commonComponents/wrapper/Wrapper';
 import { addCourse, updateCourse } from 'store/courses/reducer';
 import getDate from 'helpers/dateGeneratop';
 import { validateCreation } from 'helpers/Utils';
@@ -18,10 +18,10 @@ import {
 
 import { selectCourse } from 'store/selectors';
 import style from './CourseForm.module.sass';
-import Duration from './components/Duration/Duration';
+import Duration from './courseFormComponents/Duration/Duration';
 import { CourseModel } from './models/index';
-import { Authors } from './components/Authors/index';
-import Button from '../../common/components/Button/Button';
+import { Authors } from './courseFormComponents/Authors/index';
+import Button from '../../common/commonComponents/Button/Button';
 
 export default function CourseForm() {
   const dispatch = useDispatch();

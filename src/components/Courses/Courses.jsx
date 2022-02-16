@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import Wrapper from 'common/components/wrapper/Wrapper';
+import Wrapper from 'common/commonComponents/wrapper/Wrapper';
 import { removeCourse } from 'store/courses/reducer';
 import { selectAuthors, selectCourses } from 'store/selectors';
-import SearchBar from './components/SearchBar/SearchBar';
-import CourseCard from './components/CourseCard/CourseCard';
+import SearchBar from './coursesComponents/SearchBar/SearchBar';
+import CourseCard from './coursesComponents/CourseCard/CourseCard';
 import style from './Courses.module.sass';
 
 export default function Courses() {

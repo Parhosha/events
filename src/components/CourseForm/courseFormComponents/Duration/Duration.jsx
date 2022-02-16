@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Input from 'common/components/Input/Input';
+import Input from 'common/commonComponents/Input/Input';
 import {
   INPUT_DURATION,
   PLACEHOLDER_DURATION,

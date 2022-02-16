@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from 'common/components/Button/Button';
+import Button from 'common/commonComponents/Button/Button';
 import {
   BUTTON_ADD_AUTHOR,
   BUTTON_DELATE_AUTHOR,

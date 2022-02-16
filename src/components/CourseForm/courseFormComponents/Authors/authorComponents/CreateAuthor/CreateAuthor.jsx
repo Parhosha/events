@@ -6,8 +6,8 @@ import {
   INPUT_NAME,
   PLACEHOLDER_NAME,
 } from 'constants/elements';
-import Button from 'common/components/Button/Button';
-import Input from 'common/components/Input/Input';
+import Button from 'common/commonComponents/Button/Button';
+import Input from 'common/commonComponents/Input/Input';
 import { addAuthor } from 'store/authors/reducer';
 import { AuthorModel } from '../../../../models/index';
 

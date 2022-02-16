@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getAuthorsList } from 'helpers/Utils';
-import Wrapper from 'common/components/wrapper/Wrapper';
-import AuthorList from './components/AuthorList/AuthorList';
-import CreateAuthor from './components/CreateAuthor/CreateAuthor';
+import Wrapper from 'common/commonComponents/wrapper/Wrapper';
+import AuthorList from './authorComponents/AuthorList/AuthorList';
+import CreateAuthor from './authorComponents/CreateAuthor/CreateAuthor';
 
 import style from './index.module.sass';
 

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
-import Wrapper from 'common/components/wrapper/Wrapper';
+import Wrapper from 'common/commonComponents/wrapper/Wrapper';
 import courseDuration from 'helpers/pipeDuration';
 import { getAuthorNames } from 'helpers/Utils';
 

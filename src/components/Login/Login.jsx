@@ -6,9 +6,9 @@ import { useDispatch } from 'react-redux';
 // import { toast } from 'react-toast'
 import { Formik, Form } from 'formik';
 import { initialValues } from 'common/config/form';
-import Wrapper from 'common/components/wrapper/Wrapper';
-import Button from 'common/components/Button/Button';
-import Input from 'common/components/Input/Input';
+import Wrapper from 'common/commonComponents/wrapper/Wrapper';
+import Button from 'common/commonComponents/Button/Button';
+import Input from 'common/commonComponents/Input/Input';
 import { authorization } from 'store/user/reducer';
 import { errors } from '../../constants/elements';
 

@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import { Formik, Form } from 'formik';
 import { initialValues } from 'common/config/form';
 import { sendRegistrationData } from 'store/user/reducer';
-import Wrapper from 'common/components/wrapper/Wrapper';
-import Button from 'common/components/Button/Button';
-import Input from 'common/components/Input/Input';
+import Wrapper from 'common/commonComponents/wrapper/Wrapper';
+import Button from 'common/commonComponents/Button/Button';
+import Input from 'common/commonComponents/Input/Input';
 import { useDispatch } from 'react-redux';
 
 

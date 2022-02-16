@@ -5,8 +5,8 @@ import { useSelector } from 'react-redux';
 
 import EditIcon from 'common/images/EditIcon';
 import TrashIcon from 'common/images/TrashIcon';
-import Wrapper from 'common/components/wrapper/Wrapper';
-import Button from 'common/components/Button/Button';
+import Wrapper from 'common/commonComponents/wrapper/Wrapper';
+import Button from 'common/commonComponents/Button/Button';
 import { selectRole } from 'store/selectors';
 import {
   getAuthorNames,

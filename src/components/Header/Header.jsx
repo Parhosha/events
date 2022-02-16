@@ -2,11 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import Button from 'common/components/Button/Button';
-import Wrapper from 'common/components/wrapper/Wrapper';
+import Button from 'common/commonComponents/Button/Button';
+import Wrapper from 'common/commonComponents/wrapper/Wrapper';
 import { BUTTON_LOGOUT } from 'constants/elements';
 import { logout } from 'store/user/reducer';
-import Logo from './components/Logo/Logo';
+import Logo from './headerComponents/Logo/Logo';
 
 import style from './Header.module.sass';
 

@@ -14,7 +14,7 @@ import Login from './components/Login/Login';
 import PageNotFound from './components/404/PageNotFound';
 import PrivateRoute from './helpers/components/PrivateRoute';
 import AuthRoute from './helpers/components/AuthRoute';
-import Wrapper from './common/components/wrapper/Wrapper';
+import Wrapper from './common/commonComponents/wrapper/Wrapper';
 import ROUTE from './constants/routes';
 
 import style from './App.module.sass';

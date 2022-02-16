@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Button from 'common/components/Button/Button';
-import Input from 'common/components/Input/Input';
+import Button from 'common/commonComponents/Button/Button';
+import Input from 'common/commonComponents/Input/Input';
 import {
   BUTTON_ADD_COURSE,
   PLACEHOLDER_SEARCH,
