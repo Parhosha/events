@@ -1,9 +1,9 @@
-/* eslint-disable no-alert */
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { toast } from 'react-toast'
 import Input from 'common/components/Input/Input';
 import Wrapper from 'common/components/wrapper/Wrapper';
 import { addCourse, updateCourse } from 'store/courses/reducer';
@@ -38,7 +38,7 @@ export default function CourseForm() {
     e.preventDefault();
     const validate = validateCreation({ ...course });
     if (validate.length) {
-      alert(`Please, fill in ${validate} fields`);
+      toast.warn(`Please, fill in ${validate} fields`)
     } else {
       dispatch(fun({ ...course }));
       navigate('/courses');

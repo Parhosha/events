@@ -47,6 +47,8 @@ export default function Login() {
               state={values}
               action={handleChange}
               placeholder="Enter email"
+              required={true}
+
             />
             <Input
               type="password"
@@ -56,7 +58,7 @@ export default function Login() {
               action={handleChange}
               placeholder="Enter password"
               autoComplete="On"
-
+              required={true}
             />
             <Button
               type="submit"

@@ -39,6 +39,7 @@ export default function Registration() {
               state={values}
               action={handleChange}
               placeholder="Enter name"
+              required={true}
             />
             <Input
               type="email"
@@ -47,6 +48,7 @@ export default function Registration() {
               state={values}
               action={handleChange}
               placeholder="Enter email"
+              required={true}
             />
             <Input
               type="password"
@@ -57,6 +59,7 @@ export default function Registration() {
               action={handleChange}
               placeholder="Enter password"
               autoComplete="On"
+              required={true}
 
             />
             <Button
