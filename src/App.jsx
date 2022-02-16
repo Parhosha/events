@@ -18,8 +18,11 @@ import Wrapper from './common/components/wrapper/Wrapper';
 import ROUTE from './constants/routes';
 
 import style from './App.module.sass';
+import { ToastContainer } from 'react-toast';
+
 
 export default function App() {
+
   return (
     <Wrapper paddingSize="md" className={style.app} testId="app">
       <Router>
@@ -35,6 +38,7 @@ export default function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
+      <ToastContainer delay={3000} position="top-left"/>
     </Wrapper>
   );
 }

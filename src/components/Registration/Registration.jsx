@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 
 import { Formik, Form } from 'formik';
-import { initialValues } from 'common/config/config';
+import { initialValues } from 'common/config/form';
 import { sendRegistrationData } from 'store/user/reducer';
+import { toast } from 'react-toast'
 import Wrapper from 'common/components/wrapper/Wrapper';
 import Button from 'common/components/Button/Button';
 import Input from 'common/components/Input/Input';
@@ -23,10 +24,9 @@ export default function Registration() {
         onSubmit={async (values) => {
           const response = await sendRegistrationData(values);
           if (response.successful) {
-            values.error.text = null;
             navigate('/login');
           } else {
-            values.error.text = errors.get(response.errors[0]) || response.errors[0];
+            toast.error(errors.get(response.errors[0]) || response.errors[0]);
           }
         }}
       >
@@ -67,16 +67,8 @@ export default function Registration() {
             />
             <p className={style.loginLink}>
               If you have an account you can
-              {' '}
-              <Link to="/login">Login</Link>
+              <Link to="/login"> Login</Link>
             </p>
-            {values.successful === false && (
-            <p className={style.error}>
-              {' '}
-              {values.error.text}
-              {' '}
-            </p>
-            )}
           </Form>
         )}
       </Formik>
