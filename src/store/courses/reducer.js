@@ -3,6 +3,7 @@
 /* eslint-disable default-param-last */
 /* eslint-disable no-case-declarations */
 import API from 'services/index';
+import { errorHandler } from '../../services/errorHandles';
 import actions from './actionCreator';
 import {
   REMOVE_COURSES,
@@ -46,11 +47,11 @@ export function fetchAllCourses() {
     let response;
     try {
       response = await API.getAllCourses();
+      dispatch(actions.setCourses(response.data.result));
+      
     } catch (err) {
-      console.log(new Error(err));
+      errorHandler(err)
     }
-    dispatch(actions.setCourses(response.result));
-    return response;
   };
 }
 
@@ -59,10 +60,11 @@ export function addCourse(course) {
     let response;
     try {
       response = await API.addCourse(course, localStorage.getItem('token'));
+      dispatch(actions.addCourse(response.result));
+
     } catch (err) {
-      console.log(new Error(err));
+      errorHandler(err)
     }
-    dispatch(actions.addCourse(response.result));
   };
 }
 
@@ -72,7 +74,7 @@ export function updateCourse(course) {
     try {
       response = await API.updateCourse(course, localStorage.getItem('token'));
     } catch (err) {
-      console.log(new Error(err));
+      errorHandler({message: {result:  ""} , code: 1})
     }
     dispatch(actions.updateCourse(response.result));
     return response;
@@ -84,7 +86,7 @@ export function removeCourse(id) {
     try {
       response = await API.deleteCourse(id, localStorage.getItem('token'));
     } catch (err) {
-      console.log(new Error(err));
+      errorHandler({message: {result:  ""} , code: 1})
     }
     if (response.successful) dispatch(actions.removeCourse(id));
   };

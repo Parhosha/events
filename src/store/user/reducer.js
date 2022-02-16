@@ -3,6 +3,7 @@
 /* eslint-disable func-names */
 /* eslint-disable default-param-last */
 import API from 'services/index';
+import { errorHandler } from '../../services/errorHandles';
 import { fetchAllAuthors, removeAuthors } from '../authors/reducer';
 import { fetchAllCourses, removeCourses } from '../courses/reducer';
 import actions from './actionCreator';
@@ -56,9 +57,10 @@ export function authorization(user) {
       response = await API.authorization(user).then((res) => {
         localStorage.setItem('token', res.data.result);
         return API.getRole(res.data.result);
-      });
+      })
     } catch (err) {
-      return { ...err.response };
+        errorHandler({message: err.response ? err.response.data : {result: ""}, code: err.response || 500})
+      return { successful: false };
     }
     validateAndSetData(
       !state.courses.length,
@@ -71,16 +73,20 @@ export function authorization(user) {
   };
 }
 
-export const sendRegistrationData = async (user) => {
+export function sendRegistrationData(user) {
+  return async function () {
   let response;
   try {
     response = await API.registration({
       name: user.name.trim(),
       email: user.email.trim(),
       password: user.password.trim(),
-    });
+    })
+    return response.data;
   } catch (err) {
-    return { ...err.response.data };
+    errorHandler({message: {result:  err.response ?  err.response.data.errors[0] :  ""} , code: err.response || 500})
+
+    return { successful: false };
   }
-  return response.data;
+}
 };

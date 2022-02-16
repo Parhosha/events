@@ -2,13 +2,14 @@ import API from './axiosTemplate';
 
 const AuthService = {
 
-  registration(credits) {
-    return API.post('register', { ...credits });
+  async registration(credits) {
+    const res = await API.post('register', { ...credits });
+    return res
   },
   async authorization(credits) {
-    const res = API.post('login', {
+    const res = await API.post('login', {
       ...credits,
-    });
+    })
 
     return res;
   },

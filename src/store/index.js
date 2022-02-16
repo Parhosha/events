@@ -6,13 +6,14 @@ import thunk from 'redux-thunk';
 import user from './user/reducer';
 import courses from './courses/reducer';
 import authors from './authors/reducer';
+import { errorHandler } from '../services/errorHandles';
 
 const saveState = (state) => {
   try {
     const serialiseState = JSON.stringify(state);
     window.localStorage.setItem('app_state', serialiseState);
   } catch (err) {
-    console.log(new Error(err));
+    errorHandler({message: {result:  ""} , code: 1})
   }
 };
 

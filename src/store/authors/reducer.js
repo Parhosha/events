@@ -32,7 +32,7 @@ export function addAuthor(author) {
     try {
       response = await API.addAuthor(author, localStorage.getItem('token'));
     } catch (err) {
-      console.log(err);
+      errorHandler({message: {result:  ""} , code: 1})
       return;
     }
     dispatch(actions.addAuthor(response.result));
@@ -50,7 +50,7 @@ export function fetchAllAuthors() {
     try {
       response = await API.getAllAuthors();
     } catch (err) {
-      console.log(new Error(err));
+      errorHandler({message: {result:  ""} , code: 1})
     }
     dispatch(actions.setAuthors(response.result));
   };

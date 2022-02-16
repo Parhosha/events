@@ -3,7 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { toast } from 'react-toast'
+// import { toast } from 'react-toast'
 import { Formik, Form } from 'formik';
 import { initialValues } from 'common/config/form';
 import Wrapper from 'common/components/wrapper/Wrapper';
@@ -31,11 +31,9 @@ export default function Login() {
               password: values.password.trim(),
             }),
           );
-          if (res.successful) {
+          if (res.successful)
             navigate('/courses');
-          } else {
-            toast.error(errors.get(res.data.result)|| res.data.result);
-          }
+ 
         }}
       >
         {({ isSubmitting, values, handleChange }) => (

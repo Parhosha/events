@@ -2,7 +2,7 @@ import API from './axiosTemplate';
 
 const CourseService = {
   async getAllCourses() {
-    return API.get('courses/all').then((response) => response.data).catch((e) => e.response.data);
+    return await API.get('courses/all');
   },
   addCourse(course, token) {
     return API.post('courses/add', course, {

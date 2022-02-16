@@ -5,16 +5,17 @@ import { Link } from 'react-router-dom';
 import { Formik, Form } from 'formik';
 import { initialValues } from 'common/config/form';
 import { sendRegistrationData } from 'store/user/reducer';
-import { toast } from 'react-toast'
 import Wrapper from 'common/components/wrapper/Wrapper';
 import Button from 'common/components/Button/Button';
 import Input from 'common/components/Input/Input';
-import { errors } from '../../constants/elements';
+import { useDispatch } from 'react-redux';
+
 
 import style from './Registration.module.sass';
 
 export default function Registration() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   return (
     <Wrapper paddingSize="md" className={style.registration}>
@@ -22,12 +23,9 @@ export default function Registration() {
       <Formik
         initialValues={initialValues}
         onSubmit={async (values) => {
-          const response = await sendRegistrationData(values);
-          if (response.successful) {
+          const response = await dispatch(sendRegistrationData(values));
+          if (response.successful) 
             navigate('/login');
-          } else {
-            toast.error(errors.get(response.errors[0]) || response.errors[0]);
-          }
         }}
       >
         {({ isSubmitting, values, handleChange }) => (
