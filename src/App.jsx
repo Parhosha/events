@@ -14,11 +14,11 @@ import Login from './components/Login/Login';
 import PageNotFound from './components/404/PageNotFound';
 import PrivateRoute from './helpers/components/PrivateRoute';
 import AuthRoute from './helpers/components/AuthRoute';
+import { ToastContainer } from 'react-toast';
 import Wrapper from './common/commonComponents/wrapper/Wrapper';
 import ROUTE from './constants/routes';
 
 import style from './App.module.sass';
-import { ToastContainer } from 'react-toast';
 
 
 export default function App() {
